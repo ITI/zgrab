@@ -33,7 +33,7 @@ func (s *ExtensionsSuite) SetUpTest(c *C) {
 	}
 
 	for _, test := range tests {
-		if test.Name()[0] == 46 {
+		if test.Name()[len(test.Name())-4:] != ".cer" {
 			continue
 		}
 		var err error
